@@ -46,7 +46,7 @@ public final class Flags {
 
     // Overrides membership check
     public static final StateFlag PASSTHROUGH = register(new StateFlag("passthrough", false));
-    public static final SetFlag<String> NONPLAYER_PROTECTION_DOMAINS = register(new SetFlag<>("nonplayer-protection-domains", new StringFlag(null)));
+    public static final SetFlag<String> NONPLAYER_PROTECTION_DOMAINS = register(new SetFlag<>("nonplayer-protection-domains", null, new StringFlag(null)));
 
     // This flag is unlike the others. It forces the checking of region membership
     public static final StateFlag BUILD = register(new BuildFlag("build", true));
@@ -73,6 +73,7 @@ public final class Flags {
     public static final StateFlag TRAMPLE_BLOCKS = register(new StateFlag("block-trampling", false));
     public static final StateFlag FIREWORK_DAMAGE = register(new StateFlag("firework-damage", false));
     public static final StateFlag USE_ANVIL = register(new StateFlag("use-anvil", false));
+    public static final StateFlag USE_DRIPLEAF = register(new StateFlag("use-dripleaf", false));
 
     // These flags are similar to the ones above (used in tandem with BUILD),
     // but their defaults are set to TRUE because it is more user friendly.
